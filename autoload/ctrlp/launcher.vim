@@ -22,7 +22,6 @@ endif
 function! ctrlp#launcher#init()
   let file = fnamemodify(expand('~/.ctrlp-launcher'), ':p')
   let s:list = filereadable(file) ? filter(map(readfile(file), 'split(iconv(v:val, "utf-8", &encoding), "\\t\\+")'), 'len(v:val) > 0 && v:val[0]!~"^#"') : []
-	let g:hoge = s:list
   let s:list += [["--edit-menu--", "split ~/.ctrlp-launcher"]]
   return map(copy(s:list), 'v:val[0]')
 endfunc
