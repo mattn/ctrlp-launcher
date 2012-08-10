@@ -9,7 +9,7 @@ let s:launcher_var = {
 \  'accept': 'ctrlp#launcher#accept',
 \  'lname':  'launcher',
 \  'sname':  'launcher',
-\  'type':   'launcher',
+\  'type':   'path',
 \  'sort':   0,
 \}
 
