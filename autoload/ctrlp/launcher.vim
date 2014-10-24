@@ -13,6 +13,7 @@ let s:launcher_var = {
 \  'sname':  'launcher',
 \  'type':   'path',
 \  'sort':   0,
+\  'nolim':  1,
 \}
 
 if exists('g:ctrlp_ext_vars') && !empty(g:ctrlp_ext_vars)
