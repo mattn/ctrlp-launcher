@@ -33,7 +33,11 @@ function! ctrlp#launcher#accept(mode, str)
   let cmd = filter(copy(s:list), 'v:val[0] == a:str')[0][1]
   call ctrlp#exit()
   redraw!
-  silent exe cmd
+  if cmd =~ '^!'
+    silent exe cmd
+  else
+    exe cmd
+  endif
 endfunction
 
 function! ctrlp#launcher#exit()
