@@ -30,13 +30,16 @@ function! ctrlp#launcher#init()
 endfunc
 
 function! ctrlp#launcher#accept(mode, str)
-  let cmd = filter(copy(s:list), 'v:val[0] == a:str')[0][1]
+  let lines = filter(copy(s:list), 'v:val[0] == a:str')
   call ctrlp#exit()
   redraw!
-  if cmd =~ '^!'
+  if len(lines) > 0 && len(lines[0]) > 1
+    let cmd = lines[0][1]
+    if cmd =~ '^!'
     silent exe cmd
-  else
-    exe cmd
+    else
+      exe cmd
+    endif
   endif
 endfunction
 
