@@ -36,7 +36,7 @@ function! ctrlp#launcher#accept(mode, str)
   if len(lines) > 0 && len(lines[0]) > 1
     let cmd = lines[0][1]
     if cmd =~ '^!'
-    silent exe cmd
+      silent exe cmd
     else
       exe cmd
     endif
