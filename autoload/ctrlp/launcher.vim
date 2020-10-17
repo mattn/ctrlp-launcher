@@ -33,7 +33,6 @@ function! ctrlp#launcher#init(...)
   if !empty(s:profile)
     let l:config_file .= '-' . s:profile
   endif
-  let g:hoge = l:config_file
   let l:file = fnamemodify(expand(l:config_file), ':p')
   let s:list = filereadable(l:file) ? filter(map(readfile(l:file), 'split(iconv(v:val, "utf-8", &encoding), "\\t\\+")'), 'len(v:val) > 0 && v:val[0]!~"^#"') : []
   let s:list += [['--edit-menu--', printf('split %s', l:config_file)]]
