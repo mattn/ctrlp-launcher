@@ -22,6 +22,11 @@ Edit `~/.ctrlp-launcher`
 
 * Few tab characters to separate title and command.
 * Leading sharp mean comments. empty line is ignored.
+* `-- edit menu --` is automatically appended to edit this file.
+
+`:CtrlPLauncher devel` use `~/.ctrlp-launcher-devel`.
+
+`:CtrlPLauncher!` drop `-- edit menu --` from the list.
 
 ## Installation
 
