@@ -38,7 +38,7 @@ function! ctrlp#launcher#init(...)
   let l:file = fnamemodify(expand(l:config_file), ':p')
   let s:list = filereadable(l:file) ? filter(map(readfile(l:file), 'split(iconv(v:val, "utf-8", &encoding), "\\t\\+")'), 'len(v:val) > 0 && v:val[0]!~"^#"') : []
   if empty(s:bang)
-    let s:list += [['--edit-menu--', printf('split %s', fnameescape(l:config_file))]]
+    let s:list += [['--edit-menu--', printf('botright split %s', fnameescape(l:config_file))]]
   endif
   return map(copy(s:list), 'v:val[0]')
 endfunction
