@@ -8,6 +8,21 @@ Launcher for CtrlP
 :CtrlPLauncher
 ```
 
+## Configuration
+
+Edit `~/.ctrlp-launcher`
+
+```
+💻 raspi	!mintty ssh raspberrypi
+⚡ windows terminal	!start wt
+⚡ wsl	!start wt -p Ubuntu
+👉 cmd	!start cmd
+👉 vim	!start gvim
+```
+
+* Few tab characters to separate title and command.
+* Leading sharp mean comments. empty line is ignored.
+
 ## Installation
 
 ```
